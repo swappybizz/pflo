@@ -247,8 +247,8 @@ const Timeline = () => {
                 }}
               >
                 <div className="w-6 h-[0.1rem] bg-black border rounded-full"></div>
-                <div className="ml-4 text-xl">{milestone.date}</div>
-                <div className="ml-4 text-gray-200 text-sm w-32 opacity-50">Lead Dev @Nooffice.no</div>
+                <div className="ml-4 md:text-xl text-base">{milestone.date}</div>
+                <div className="ml-4 text-gray-200  md:text-sm text-xs md:w-32 opacity-50">Lead Dev @Nooffice.no</div>
               </div>
             ))}
           </div>

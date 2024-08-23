@@ -3,16 +3,14 @@ import { useEffect, useState } from 'react';
 import { set, throttle } from 'lodash';
 import Timeline from './components/Timeline';
 import TopHeader from './components/TopHeader';
-
-
 import Expertese from './components/Expertese';
 import Head from 'next/head';
 const ScrollAnimation = () => {
 const [showPopup, setShowPopup] = useState(false);  
 const [infoOrWork, setInfoOrWork] = useState('info');
-
-  const [currentImage, setCurrentImage] = useState(1);
-  const totalImages = 36;
+const [currentImage, setCurrentImage] = useState(1);
+const totalImages = 36;
+const words = ['alter', 'improve', 'simplify', 'design', 'build', 'develop'];
 
   const handleScroll = throttle(() => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -46,30 +44,40 @@ useEffect(() => {
   }, []);
 
   const [currentWord, setCurrentWord] = useState('engineer');
-  const words = ['alter', 'improve', 'simplify', 'design', 'build', 'develop'];
 
-  useEffect(() => {
-    let interval;
-    const flipWords = () => {
-      let index = 0;
-      interval = setInterval(() => {
-        setCurrentWord(words[index]);
-        index = (index + 1) % words.length;
-      }, 600); 
-    };
+  // useEffect(() => {
+  //   const flipWords = () => {
+  //     let index = 0;
+  //     return setInterval(() => {
+  //       setCurrentWord(words[index]);
+  //       index = (index + 1) % words.length;
+  //     }, 700);
+  //   };
 
-    const realityElement = document.getElementById('reality');
-    realityElement.addEventListener('mouseover', flipWords);
-    realityElement.addEventListener('mouseleave', () => {
-      clearInterval(interval);
-      setCurrentWord('engineer');
-    });
+  //   const realityElement = document.getElementById('reality');
+  //   let interval;
 
-    return () => {
-      realityElement.removeEventListener('mouseover', flipWords);
-      realityElement.removeEventListener('mouseleave', () => clearInterval(interval));
-    };
-  }, []);
+  //   const handleMouseOver = () => {
+  //     interval = setTimeout(() => {
+  //       interval = flipWords();
+  //     }, 500); // Add a small delay of 500 milliseconds before starting the word flip
+  //   };
+
+  //   const handleMouseLeave = () => {
+  //     clearTimeout(interval);
+  //     clearInterval(interval);
+  //     setCurrentWord('engineer');
+  //   };
+
+  //   realityElement.addEventListener('mouseover', handleMouseOver);
+  //   realityElement.addEventListener('mouseleave', handleMouseLeave);
+
+  //   return () => {
+  //     realityElement.removeEventListener('mouseover', handleMouseOver);
+  //     realityElement.removeEventListener('mouseleave', handleMouseLeave);
+  //   };
+  // }, [words]);
+
 
   return (
 
@@ -134,6 +142,8 @@ useEffect(() => {
           </span>{' '}
           your digital{' >'}
           <span
+          // on the hover flip over the words
+            
             id="reality"
             className="font-black text-gray-300 cursor-cell transition-all duration-500 ease-in-out"
             style={{ fontFamily: 'Fira Code, monospace' }}

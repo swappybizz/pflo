@@ -6,7 +6,7 @@ const TopHeader = ({infoOrWork, setInfoOrWork}) => {
       <div className='flex items-center m-2'>
         <span className='text-3xl md:text-4xl bg-white rounded-sm text-gray-700'>§</span>
         <div className='ml-2 md:ml-3'>
-          <div className='text-base md:text-lg font-bold'>Swapnil Kumar</div>
+          <div className='text-base md:text-lg font-bold'>Swapnil </div>
           <div className='text-xs md:text-sm text-gray-400 hover:bg-white hover:text-black transition-all duration-75 ease-in-out'>
             Fullstack Developer<span className='text-green-600 animate-pulse'>|</span>
           </div>
