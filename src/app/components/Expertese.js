@@ -113,7 +113,7 @@ const Expertise = () => {
       {skills.map((skill, index) => (
         <div
           key={index}
-          className={`p-4 w-full min-h-48 border-b-[1px] border-gray-500 border-opacity-50 flex items-center text-gray-300 transition-all duration-200 relative overflow-hidden hover:border-gray-300 hover:border-opacity-70`}
+          className={`p-4 w-full min-h-48 border-b-[1px] border-gray-500 border-opacity-50 flex items-center text-gray-300 transition-all duration-200 relative overflow-hidden hover:border-gray-300 hover:border-opacity-70 bg-black bg-opacity-70 `}
           onMouseEnter={() => setHovered(skill.title)}
           onMouseLeave={() => setHovered(null)}
         >

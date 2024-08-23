@@ -82,13 +82,13 @@ useEffect(() => {
       className="relative min-h-[200vh] flex items-center justify-center text-white scroll-smooth"
     >
       <TopHeader infoOrWork={infoOrWork} setInfoOrWork={setInfoOrWork} />
-      <div className="fixed top-0 left-0 w-1/2 h-full flex flex-col items-center justify-center">
+      <div className="fixed top-0 left-0 md:w-1/2 md:h-full flex flex-col items-center justify-center">
         <img
           src={`/images/${currentImage}.webp`}
           alt="Scroll Animation"
-          className="object-cover md:ml-[0%]"
+          className="object-cover md:ml-[0%] "
         />
-        <div className="flex flex-col text-2xl font-bold text-gray-300 w-full text-left border-t-[1px] border-opacity-0 justify-start border-gray-500 min-h-48 pt-2">
+        {/* <div className="flex flex-col text-2xl font-bold text-gray-300 w-full text-left border-t-[1px] border-opacity-0 justify-start border-gray-500 min-h-48 pt-2">
           <p className="m2-2 text-base mt-auto">
             Check out §uperline, a distribution platform for experts in various fields.
             <span className="text-2xl animate-pulse"> ⬇</span>
@@ -120,12 +120,12 @@ useEffect(() => {
             placeholder="Enter email & start session Now NO WAITING!"
             className="w-full p-0 mt-2 text-gray-300 bg-transparent border-b-[1px] border-gray-500 border-opacity-50 text-base"
           />
-        </div>
+        </div> */}
       </div>
 
-      <div className="w-1/2 mb-auto ml-auto transition-all duration-300">
+      <div className="md:w-1/2 mb-auto ml-auto transition-all duration-300 max-w-full mt-24">
         <p
-          className="text-6xl text-gray-500 text-right bg-transparent bg-opacity-50 p-2 rounded z-50 ml-auto mb-auto mt-36 pt-12 mr-12 transition-all duration-200 ease-in-out"
+          className="md:text-6xl text-4xl text-gray-500 text-right bg-transparent bg-opacity-50 p-2 rounded z-50 ml-auto mb-auto md:mt-36 mt-[110%] pt-12 mr-12 transition-all duration-200 ease-in-out"
           style={{ fontFamily: 'Fira Code, monospace' }}
         >
           My keystrokes can{' '}
@@ -157,7 +157,7 @@ useEffect(() => {
           </div>
           <div className="flex flex-col items-end space-y-2 border-t-[1px] pt-2 border-gray-500 border-opacity-50">
             <div className="text-lg flex items-center">
-              <span role="img" className="grayscale" aria-label="location">
+              <span role="img" className="grayscale hidden md:flex" aria-label="location">
                 📍
               </span>{' '}
               Based in Ålesund, Norway
@@ -165,7 +165,7 @@ useEffect(() => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-48 h-full">
+        <div className="flex flex-col mt-48 h-full " >
           <Expertese />
         </div>
       </div>

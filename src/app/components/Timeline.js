@@ -185,7 +185,7 @@ const Timeline = () => {
       {milestonesContent[activeMilestone]?.map((Entity, i) => (
         <div
           key={i}
-          className="border border-gray-500  cursor-pointer w-[20vw] rounded h-[42vh]  border-opacity-40 transition-all duration-300 ease-in-out hover:w-[75vw]"
+          className="border border-gray-500 mt-2 cursor-pointer md:w-[20vw] rounded h-[42vh]  border-opacity-40 transition-all duration-300 ease-in-out hover:w-[75vw] "
           style={{
             backgroundImage: `url(${Entity.details.pics[currentImageIndex[i] || 0]})`,
             backgroundSize: 'contain',
@@ -228,7 +228,7 @@ const Timeline = () => {
         
 
       </button>
-      <div className="timelinediv fixed flex items-center justify-center flex-col top-[15%] left-12 h-1/2 w-1/4 z-50 overflow-y-hidden">
+      <div className="timelinediv rotate-90 md:rotate-0 fixed flex items-center justify-center flex-col md:top-[15%] -top-24 md:left-12 left-1/2 h-1/2 w-1/4 z-50 overflow-hidden">
         {/* Gradient overlay */}
         <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-black via-transparent to-black z-[1000]"></div>
         {/* Timeline line */}
@@ -256,12 +256,12 @@ const Timeline = () => {
       </div>
 
       {/* Content that changes based on the visible milestone */}
-      <div className="fixed right-12 top-[10%] w-1/2">
+      <div className="fixed md:right-12 md:top-[10%] md:w-1/2 top-[25%]">
         {renderContent()}
       </div>
       {/* Hovered Entity details */}
       {hoveredEntity && (
-        <div className="fixed bottom-2 right-12 w-1/2 max-h-[50%] overflow-hidden bg-black border border-slate-700 border-opacity-50 p-4 rounded shadow-lg">
+        <div className="fixed bottom-2 overflow-y-auto md:right-12 md:w-1/2 md:max-h-[50%] max-h-[30%] w-full overflow-hidden bg-black border border-slate-700 border-opacity-50 p-4 rounded shadow-lg">
   <div className="grid grid-cols-2 gap-4 h-full">
     {/* Left Column */}
     <div className="flex flex-col justify-between">
