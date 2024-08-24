@@ -175,7 +175,7 @@ useEffect(() => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-48 h-full " >
+        <div className="flex flex-col md:mt-48 h-full " >
           <Expertese />
         </div>
       </div>
