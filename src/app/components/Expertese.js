@@ -132,13 +132,13 @@ const Expertise = () => {
             }`}
             style={{ width: '100%' }}
           >
-            <div className="flex justify-between w-full h-full pt-4 flex-1 text-left">
+            <div className="flex justify-between w-full h-full pt-4 flex-1 text-left overflow-y-auto">
               {skill.sections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="flex-1 text-left mb-2">
+                <div key={sectionIndex} className="flex-1 text-left mb-2 ">
                   <h3 className="font-bold text-base text-green-700 underline">{section.heading}</h3>
                   <ul>
                     {section.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-white">{item}</li>
+                      <li key={itemIndex} className="text-white md:text-base text-sm">{item}</li>
                     ))}
                   </ul>
                 </div>
