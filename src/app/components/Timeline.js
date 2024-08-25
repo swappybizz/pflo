@@ -226,8 +226,39 @@ const Timeline = () => {
           
         </a>
         
+        
 
       </button>
+      <div
+      className='fixed text-sm bottom-36 left-5 md:w-1/4  border mx-2 p-2 rounded-xl border-gray-400 border-opacity-50 bg-black bg-opacity-50 text-gray-100'
+      >
+        <h1
+        classname= 'w-full text-xs text-center text-gray-400 ' 
+        >Academia:</h1>
+        <h1
+        classname= 'w-full text-center ' 
+        >MSc: Product and Sytems Design, NTNU</h1>
+        <h1
+        classname= 'w-full text-center ' 
+        >Specialisation: DRL Control Sytems</h1>
+        <h1
+        classname= 'w-full text-center' 
+        >
+          Publications:
+          <a
+          className='text-green-500 cursor-pointer'
+          href='https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2825134?locale-attribute=no'
+          >
+            DRL Based Control of Marine Hybrid Power
+          </a>
+        </h1>
+
+
+        
+
+        
+
+      </div>
       <div className="timelinediv rotate-90 md:rotate-0 fixed flex items-center justify-center flex-col md:top-[15%] -top-24 md:left-12 left-1/2 h-1/2 w-1/4 z-50 overflow-hidden">
         {/* Gradient overlay */}
         <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-black via-transparent to-black z-[1000]"></div>
