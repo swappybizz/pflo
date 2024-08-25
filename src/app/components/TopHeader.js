@@ -35,8 +35,8 @@ const TopHeader = ({infoOrWork, setInfoOrWork}) => {
       </div>
 
       <div className='flex space-x-2 md:space-x-4 mr-2 md:mr-4'>
-        <a href='mailto:example@example.com' className='text-gray-300 hover:text-white text-sm md:text-base'>Email</a>
-        <a href='tel:+123456789' className='text-gray-300 hover:text-white text-sm md:text-base'>Phone</a>
+        <a href='mailto:swapnil@nooffice.no' className='text-gray-300 hover:text-white text-sm md:text-base'>Email</a>
+        <a href='tel:+4740565790' className='text-gray-300 hover:text-white text-sm md:text-base'>Phone</a>
       </div>
     </div>
   );
