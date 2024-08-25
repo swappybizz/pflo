@@ -237,7 +237,7 @@ const Timeline = () => {
         >Academia:</h1>
         <h1
         classname= 'w-full text-center ' 
-        >MSc: Product and Sytems Design, NTNU</h1>
+        >MSc: Product and Systems Design, NTNU</h1>
         <h1
         classname= 'w-full text-center ' 
         >Specialisation: DRL Control Sytems</h1>
